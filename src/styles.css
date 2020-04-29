@@ -1,1 +1,198 @@
-/* You can add global styles to this file, and also import other style files */
+@media screen and (max-width: 992px){
+
+
+  @media screen and (max-width:550px){
+
+    nav{
+      display: inline-block !important;
+  }
+      h2{
+          font-size: 16px;
+      }
+      #navegacion{
+          margin-left:35px !important;
+      }
+      #login{
+          margin-left: 0px;
+      }
+      @media screen and (max-width:370px){
+          #logo img{
+              align-content: center;
+          }
+      }
+  }
+
+}
+
+#myCarousel{
+  min-height: 200px;
+}
+.container{
+  min-height: 200px;
+}
+
+#cabecera{
+  background-color: #F2FFEE;
+  padding-bottom:15px;
+}
+
+#logo img{
+  margin-top:10px;
+  box-shadow: 2px 2px 2px 2px #39E304;
+  -webkit-box-shadow: 2px 2px 2px 2px #39E304;
+}
+#navegacion{
+  margin-top:2px !important;
+}
+#myNavbar .collapse .navbar-collapse{
+  display: inline-block !important;
+}
+#logo img:hover, a i:hover{
+  opacity: 0.8;
+  transform: scale(1.1,1.1);
+  -webkit-transform: scale(1.1,1.1);
+}
+
+#login{
+  margin-top:25px;
+  margin-left: 100px;
+}
+
+#pie{
+  background-color: #D4FFC8;
+}
+
+.item img{
+  max-height: 400px;
+}
+
+.boton{
+  padding:7px;
+  background-color: #F2FFEE;
+  border-radius: 15px 5px 5px 5px;
+  -webkit-border-radius: 15px 5px 5px 5px;
+  margin-right:3px;
+  margin-bottom: 15px;
+}
+
+.boton:hover{
+  background-color: green;
+  color:white;
+  cursor:pointer;
+}
+
+nav .container-fluid{
+  box-shadow: 2px 2px 2px 2px darkgreen;
+  border-radius: 3px;
+}
+
+.navbar-default{
+  background-color: #EFFDEA;
+}
+.container .navbar-header{
+  padding-left:15px;
+}
+
+ul li a{
+  color: darkgreen !important;
+  padding:15px !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ul li a:hover{
+  background-color:green !important;
+  color:white !important;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  box-shadow: 1px 0px 1px 2px white;
+  cursor: pointer;
+}
+
+input,select,textarea{
+  color:black !important;
+}
+input:focus, select:focus, textarea:focus{
+  border-color:#5D854F !important;
+  box-shadow: 0px 0px 2px 2px #5D854F !important;
+  -webkit-box-shadow: 0px 0px 1px 1px #5D854F !important;
+}
+input:hover, select:hover, textarea:hover{
+  box-shadow: inset 0px 0px 1px 1px #5D854F;
+}
+
+input:invalid{
+  border-color:red !important;
+  box-shadow: 0px 0px 2px 2px red !important;
+  -webkit-box-shadow: 0px 0px 1px 1px red !important;
+}
+
+@keyframes barrido{
+  100% {top: 76%}
+  10% {top: 7%}
+}
+@-webkit-keyframes barrido{
+  100% {top: 68%}
+  10% {top: 7%}
+}
+.carousel-caption{
+  -webkit-animation: barrido 2s !important;
+  animation: barrido 2s !important;
+  font: oblique bold 120% cursive;
+}
+
+#formularioRegistro{
+  margin-bottom:15px;
+}
+
+.carousel-inner img {
+  width: 100%;
+  max-height: 450px;
+}
+
+#myCarousel{
+  margin-bottom: 15px;
+}
+
+.badge{
+  border-radius: 50px;
+}
+.icono{
+  cursor: pointer;
+}
+
+.navbar-expand-sm .container-fluid {
+  margin:15px;
+}
+
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+#myModal{
+  margin-top: 12%;
+}
+fieldset {
+  border-radius: 4px;
+  padding:7px;
+  border: 1px solid green;
+  margin:7px;
+}
+legend {
+  background-color: #F2FFEE;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 3px 5px 3px 7px;
+  width: auto;
+}
