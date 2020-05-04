@@ -5,21 +5,21 @@
 
     nav{
       display: inline-block !important;
-  }
-      h2{
-          font-size: 16px;
-      }
-      #navegacion{
-          margin-left:35px !important;
-      }
-      #login{
-          margin-left: 0px;
-      }
-      @media screen and (max-width:370px){
-          #logo img{
-              align-content: center;
-          }
-      }
+    }
+    h2{
+        font-size: 16px;
+    }
+    #navegacion{
+        margin-left:35px !important;
+    }
+    #login{
+        margin-left: 0px;
+    }
+    @media screen and (max-width:370px){
+        #logo img{
+            align-content: center;
+        }
+    }
   }
 
 }
@@ -195,4 +195,22 @@ legend {
   font-weight: bold;
   padding: 3px 5px 3px 7px;
   width: auto;
+}
+
+.center {
+  align-content: center;
+  text-align: center;
+}
+
+.align-right {
+  align-content: right;
+  text-align: right;
+}
+
+.active {
+  background-color: rgb(155, 245, 132);
+}
+
+.contenido {
+  padding-top: 100px;
 }

@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <div class="row mt-3 justify-content-center">
+    <ng-container *ngFor="let imagen of infoService.galeria">
+      <div *ngIf="imagen.seccion == 'carpinteria'" class="card my-2 mr-3" style="width: 18rem;">
+        <img class="card-img-top" [src]="imagen.url" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{ imagen.frase }}</h5>
+          <a href="#" class="btn btn-success">Ver imagen en grande</a>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
