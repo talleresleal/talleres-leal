@@ -12,8 +12,9 @@
     #navegacion{
         margin-left:35px !important;
     }
-    #login{
-        margin-left: 0px;
+    .form-inline {
+      margin-left: 0px !important;
+      width: 100%;
     }
     @media screen and (max-width:370px){
         #logo img{
@@ -139,10 +140,6 @@ input:invalid{
   font: oblique bold 120% cursive;
 }
 
-#formularioRegistro{
-  margin-bottom:15px;
-}
-
 .carousel-inner img {
   width: 100%;
   max-height: 450px;
@@ -163,21 +160,6 @@ input:invalid{
   margin:15px;
 }
 
-.has-search .form-control {
-  padding-left: 2.375rem;
-}
-
-.has-search .form-control-feedback {
-  position: absolute;
-  z-index: 2;
-  display: block;
-  width: 2.375rem;
-  height: 2.375rem;
-  line-height: 2.375rem;
-  text-align: center;
-  pointer-events: none;
-  color: #aaa;
-}
 #myModal{
   margin-top: 12%;
 }
@@ -213,4 +195,31 @@ legend {
 
 .contenido {
   padding-top: 100px;
+}
+
+@keyframes desvanece{
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-webkit-keyframes desvanece{
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+.galeria{
+  -webkit-animation: desvanece 2s !important;
+  animation: desvanece 2s !important;
+  height: 200px;
+}
+
+/** SVG Animation */
+svg path,
+svg rect{
+  fill: green;
+}
+
+span i {
+  color: green;
+}
+.input-group-prepend span {
+  background-color: #EFFDEA !important;
 }

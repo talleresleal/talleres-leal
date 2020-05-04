@@ -8,6 +8,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { MaquinariaAgricolaComponent } from './pages/maquinaria-agricola/maquinaria-agricola.component';
 import { CarpinteriaMetalicaComponent } from './pages/carpinteria-metalica/carpinteria-metalica.component';
+import { SearchComponent } from './pages/search/search.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CarpinteriaMetalicaComponent } from './pages/carpinteria-metalica/carpi
     FooterComponent,
     InicioComponent,
     MaquinariaAgricolaComponent,
-    CarpinteriaMetalicaComponent
+    CarpinteriaMetalicaComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
