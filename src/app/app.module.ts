@@ -9,6 +9,7 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { MaquinariaAgricolaComponent } from './pages/maquinaria-agricola/maquinaria-agricola.component';
 import { CarpinteriaMetalicaComponent } from './pages/carpinteria-metalica/carpinteria-metalica.component';
 import { SearchComponent } from './pages/search/search.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SearchComponent } from './pages/search/search.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

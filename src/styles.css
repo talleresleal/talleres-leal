@@ -1,5 +1,14 @@
+#busqueda {
+  width: 60% !important;
+  margin-left: 40% !important;
+}
+@media screen and (max-width: 1225px){
+  #busqueda {
+    width: 100% !important;
+    margin-left: 0% !important;
+  }
+}
 @media screen and (max-width: 992px){
-
 
   @media screen and (max-width:550px){
 
@@ -190,7 +199,7 @@ legend {
 }
 
 .active {
-  background-color: rgb(155, 245, 132);
+  background-color: rgb(155, 245, 132) !important;
 }
 
 .contenido {

@@ -32,5 +32,36 @@
         </div>
       </div>
     </ng-container>
+    <div class="col-12 mt-3 d-flex justify-content-center">
+      <pagination-template
+        #p="paginationApi"
+        [id]="paginationConfig.id"
+        [maxSize]="maxSizePagination"
+        autoHide="true"
+        (pageChange)="paginationConfig.currentPage = $event">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li [className]="p.isFirstPage() ? 'page-item disabled' : 'page-item'">
+              <a class="page-link" (click)="p.previous()" aria-label="Anterior">
+                <span aria-hidden="true">«</span>
+              </a>
+            </li>
+            <li *ngFor="let page of p.pages" [className]=" p.getCurrent() === page.value ? 'page-item disabled' : 'page-item'">
+              <a class="page-link" (click)="p.setCurrent(page.value)" *ngIf="p.getCurrent() !== page.value">
+                {{ page.label }}
+              </a>
+              <a class="page-link active" *ngIf="p.getCurrent() === page.value">
+                {{ page.label }}
+              </a>
+            </li>
+            <li [className]="p.isLastPage() ? 'page-item disabled' : 'page-item'">
+              <a class="page-link" (click)="p.next()" aria-label="Siguiente">
+                <span aria-hidden="true">»</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </pagination-template>
+    </div>
   </div>
 </div>
