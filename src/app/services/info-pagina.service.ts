@@ -11,12 +11,13 @@ export class InfoPaginaService {
   info: InfoPagina = {};
   cargada = false;
   cargando = true;
+  cargandoSeccion = true;
   galeria: Galeria[];
   imagenesFiltrado: Galeria[];
 
   constructor(private http: HttpClient) {
     this.cargarInfo();
-    this.cargarGaleria();
+    this.cargarGaleriaCompleta();
   }
 
   private cargarInfo() {
@@ -28,7 +29,21 @@ export class InfoPaginaService {
     );
   }
 
-  private cargarGaleria() {
+  public cargarGaleria(seccion: string) {
+    return new Promise( ( resolve, reject ) => {
+      this.http.get('https://talleresleal-e9264.firebaseio.com/galeria.json').subscribe(
+        (resp: Galeria[]) => {
+          this.galeria = resp.filter(
+            imagen => imagen.seccion === seccion
+          );
+          this.cargandoSeccion = false;
+          resolve();
+        }
+      );
+    });
+  }
+
+  private cargarGaleriaCompleta() {
     return new Promise( ( resolve, reject ) => {
       this.http.get('https://talleresleal-e9264.firebaseio.com/galeria.json').subscribe(
         (resp: Galeria[]) => {
@@ -42,7 +57,7 @@ export class InfoPaginaService {
 
   buscar( termino: string) {
     if (this.galeria.length === 0) {
-      this.cargarGaleria().then( () => {
+      this.cargarGaleriaCompleta().then( () => {
         this.filtrarImagenes( termino );
       });
     } else {

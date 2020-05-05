@@ -32,6 +32,7 @@ export class CarpinteriaMetalicaComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.infoService.cargarGaleria('carpinteria');
   }
 
 }

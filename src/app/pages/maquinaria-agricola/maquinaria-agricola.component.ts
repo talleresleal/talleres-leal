@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InfoPaginaService } from 'src/app/services/info-pagina.service';
 import { PaginationInstance } from 'ngx-pagination';
-import { Galeria } from 'src/app/interfaces/galeria.interface';
 
 @Component({
   selector: 'app-maquinaria-agricola',
@@ -33,6 +32,7 @@ export class MaquinariaAgricolaComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.infoService.cargarGaleria('maquinaria');
   }
 
 }

@@ -23,15 +23,13 @@
   </div>
 
   <div class="row mt-3 justify-content-center" *ngIf="!infoService.cargando">
-    <ng-container *ngFor="let imagen of infoService.galeria">
-      <div *ngIf="imagen.seccion == 'carpinteria'" class="card my-2 mr-3" style="width: 18rem;">
-        <img class="card-img-top galeria" [src]="imagen.url" alt="{{ imagen.frase }}">
-        <div class="card-body">
-          <h5 class="card-title">{{ imagen.frase }}</h5>
-          <button style="width: 100%;" class="boton">Ver imagen en grande</button>
-        </div>
+    <div *ngFor="let imagen of infoService.galeria | paginate: paginationConfig" class="card my-2 mr-3" style="width: 18rem;">
+      <img class="card-img-top galeria" [src]="imagen.url" alt="{{ imagen.frase }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ imagen.frase }}</h5>
+        <button style="width: 100%;" class="boton">Ver imagen en grande</button>
       </div>
-    </ng-container>
+    </div>
     <div class="col-12 mt-3 d-flex justify-content-center">
       <pagination-template
         #p="paginationApi"
