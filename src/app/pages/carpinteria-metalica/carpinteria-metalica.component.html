@@ -23,11 +23,27 @@
   </div>
 
   <div class="row mt-3 justify-content-center" *ngIf="!infoService.cargando">
-    <div *ngFor="let imagen of infoService.galeria | paginate: paginationConfig" class="card my-2 mr-3" style="width: 18rem;">
+    <div *ngFor="let imagen of infoService.galeria | paginate: paginationConfig; index as i" class="card my-2 mr-3" style="width: 18rem;">
       <img class="card-img-top galeria" [src]="imagen.url" alt="{{ imagen.frase }}">
       <div class="card-body">
         <h5 class="card-title">{{ imagen.frase }}</h5>
-        <button style="width: 100%;" class="boton">Ver imagen en grande</button>
+        <button style="width: 100%;" class="boton" id="img{{ i }}" data-toggle="modal" [attr.data-target]="'#myModal' + i ">Ver imagen</button>
+      </div>
+      <!-- Modal -->
+      <div id="myModal{{ i }}" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" [attr.aria-labelledby]="'modal' + i" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal{{ i }}">{{ imagen.frase }}</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img style="width: 100%;" [src]="imagen.url" alt="{{ imagen.frase }}">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="col-12 mt-3 d-flex justify-content-center">

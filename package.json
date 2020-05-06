@@ -23,6 +23,8 @@
     "bootstrap": "^4.4.1",
     "ngx-pagination": "^5.0.0",
     "rxjs": "~6.5.4",
+    "screenfull": "^3.3.0",
+    "sweetalert2": "^9.10.12",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },

@@ -12,6 +12,27 @@
 
   @media screen and (max-width:550px){
 
+    .slider{
+      width: 100% !important;
+      margin: 0 !important;
+      margin-top: 40px !important;
+      margin-bottom: 40px !important;
+      padding:0 !important;
+    }
+
+    #myCarousel {
+      width: 100%;
+      margin: 0 !important;
+      padding:0 !important;
+    }
+
+    #informacion {
+      padding: 20px !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      width: 97% !important;
+    }
+
     nav{
       display: inline-block !important;
     }
@@ -34,8 +55,13 @@
 
 }
 
+.slider{
+  min-width: 85%;
+}
+
 #myCarousel{
-  min-height: 200px;
+  margin-bottom: 15px;
+  padding-bottom: 0 !important;
 }
 .container{
   min-height: 200px;
@@ -143,8 +169,13 @@ input:invalid{
   100% {top: 68%}
   10% {top: 7%}
 }
+@-ms-keyframes barrido{
+  100% {top: 68%}
+  10% {top: 7%}
+}
 .carousel-caption{
   -webkit-animation: barrido 2s !important;
+  -ms-animation: barrido 2s !important;
   animation: barrido 2s !important;
   font: oblique bold 120% cursive;
 }
@@ -152,10 +183,6 @@ input:invalid{
 .carousel-inner img {
   width: 100%;
   max-height: 450px;
-}
-
-#myCarousel{
-  margin-bottom: 15px;
 }
 
 .badge{
@@ -231,4 +258,26 @@ span i {
 }
 .input-group-prepend span {
   background-color: #EFFDEA !important;
+}
+
+/* Quienes somos */
+#informacion{
+	width: 90%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 5%;
+	background-image: url(assets/img/fondoInfo.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	padding:40px;
+	font-family: Century;
+  font-size:14pt;
+  border-radius: 15% 3%;
+  -webkit-animation: desvanece 2s !important;
+  animation: desvanece 1s !important;
 }

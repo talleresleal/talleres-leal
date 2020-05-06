@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { InfoPaginaService } from 'src/app/services/info-pagina.service';
 import { PaginationInstance } from 'ngx-pagination';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-carpinteria-metalica',
-  templateUrl: './carpinteria-metalica.component.html',
-  styleUrls: ['./carpinteria-metalica.component.css']
+  templateUrl: './carpinteria-metalica.component.html'
 })
 export class CarpinteriaMetalicaComponent implements OnInit {
 
-  constructor(public infoService: InfoPaginaService) { }
+  constructor(public infoService: InfoPaginaService, private title: Title) { }
 
   public maxSizePagination = '10';
 
@@ -32,6 +32,7 @@ export class CarpinteriaMetalicaComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.title.setTitle('Talleres Leal - Estructuras metálicas');
     this.infoService.cargarGaleria('carpinteria');
   }
 

@@ -12,18 +12,23 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link rel="icon" type="image/x-icon" href="assets/img/icono.jpg">
 </head>
-<body>
+<body style="padding-left: 0.1% !important; padding-right: 0.1% !important;">
   <app-root></app-root>
 </body>
 <script>
   $(document).ready(function () {
-      $('[data-toggle="tooltip"]').tooltip();
-      $("#menu").click(function () {
-          $("#myNavbar").toggle();
-      });
-      $("a.nav-link").click(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+    $("#menu").click(function () {
         $("#myNavbar").toggle();
-      });
+    });
+    $("a.nav-link").click(function() {
+      $("#myNavbar").toggle();
+    });
+
+    $("#buscar").keyup(function(e){
+      var code = e.key;
+      if(code==="Enter") $("#myNavbar").toggle();
+    });
   });
 </script>
 </html>

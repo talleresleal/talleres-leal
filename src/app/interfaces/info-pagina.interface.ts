@@ -7,4 +7,6 @@ export interface InfoPagina {
   email?: string;
   facebook?: string;
   copyright?: string;
+  informacion1?: string;
+  informacion2?: string;
 }

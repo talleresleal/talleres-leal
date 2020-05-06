@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { InfoPaginaService } from 'src/app/services/info-pagina.service';
 import { PaginationInstance } from 'ngx-pagination';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-maquinaria-agricola',
-  templateUrl: './maquinaria-agricola.component.html',
-  styleUrls: ['./maquinaria-agricola.component.css']
+  templateUrl: './maquinaria-agricola.component.html'
 })
 export class MaquinariaAgricolaComponent implements OnInit {
 
-  constructor(public infoService: InfoPaginaService) { }
+  constructor(public infoService: InfoPaginaService, private title: Title) { }
 
   public maxSizePagination = '10';
 
@@ -32,6 +32,7 @@ export class MaquinariaAgricolaComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.title.setTitle('Talleres Leal - Maquinaria Agrícola');
     this.infoService.cargarGaleria('maquinaria');
   }
 

@@ -10,6 +10,7 @@ import { MaquinariaAgricolaComponent } from './pages/maquinaria-agricola/maquina
 import { CarpinteriaMetalicaComponent } from './pages/carpinteria-metalica/carpinteria-metalica.component';
 import { SearchComponent } from './pages/search/search.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { InformacionComponent } from './pages/informacion/informacion.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     InicioComponent,
     MaquinariaAgricolaComponent,
     CarpinteriaMetalicaComponent,
-    SearchComponent
+    SearchComponent,
+    InformacionComponent
   ],
   imports: [
     BrowserModule,
