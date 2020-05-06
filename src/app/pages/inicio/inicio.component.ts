@@ -10,7 +10,7 @@ export class InicioComponent implements OnInit {
   constructor(private title: Title) { }
 
   ngOnInit(): void {
-    this.title.setTitle('Talleres Leal');
+    this.title.setTitle('Talleres Leal. Cerrajería y maquinaria agrícola');
   }
 
 }
