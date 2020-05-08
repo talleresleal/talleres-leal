@@ -281,3 +281,17 @@ span i {
   -webkit-animation: desvanece 2s !important;
   animation: desvanece 1s !important;
 }
+
+.ir-arriba {
+	display:none;
+	padding:10px;
+	background:#F2FFEE;
+	font-size:30px;
+	color:#fff;
+	cursor:pointer;
+	position: fixed;
+	bottom:10%;
+  right:3%;
+  border-radius: 45px;
+  opacity: 0.65;
+}

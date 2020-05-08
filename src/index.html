@@ -18,6 +18,7 @@
 </head>
 <body style="padding-left: 0.1% !important; padding-right: 0.1% !important;">
   <app-root></app-root>
+  <span title="Ir a arriba" class="ir-arriba"><i class="fas fa-angle-up"></i></span>
 </body>
 <script>
   $(document).ready(function () {
@@ -32,6 +33,20 @@
     $("#buscar").keyup(function(e){
       var code = e.key;
       if(code==="Enter") $("#myNavbar").toggle();
+    });
+
+    $('.ir-arriba').click(function(){
+      $('body, html').animate({
+        scrollTop: '0px'
+      }, 600);
+    });
+
+    $(window).scroll(function(){
+      if( $(this).scrollTop() > 0 ){
+        $('.ir-arriba').slideDown(300);
+      } else {
+        $('.ir-arriba').slideUp(300);
+      }
     });
   });
 </script>

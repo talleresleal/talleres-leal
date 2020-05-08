@@ -43,7 +43,7 @@ export class InfoPaginaService {
     });
   }
 
-  private cargarGaleriaCompleta() {
+  public cargarGaleriaCompleta() {
     return new Promise( ( resolve, reject ) => {
       this.http.get('https://talleresleal-e9264.firebaseio.com/galeria.json').subscribe(
         (resp: Galeria[]) => {
