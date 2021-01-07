@@ -74,8 +74,8 @@
 
 #logo img{
   margin-top:10px;
-  box-shadow: 2px 2px 2px 2px #39E304;
-  -webkit-box-shadow: 2px 2px 2px 2px #39E304;
+  box-shadow: 2px 2px 2px 2px #765640;
+  -webkit-box-shadow: 2px 2px 2px 2px #765640;
 }
 #navegacion{
   margin-top:2px !important;
@@ -135,7 +135,7 @@ ul li a{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 ul li a:hover{
-  background-color:green !important;
+  background-color:	green !important;
   color:white !important;
   border-radius: 6px;
   -webkit-border-radius: 6px;
